@@ -56,9 +56,17 @@ button:hover {
   opacity: 0.9;
 }
 
-.btn-success { background: #10b981; }
-.btn-error { background: #ef4444; }
-.btn-warning { background: #f59e0b; }
+.btn-success {
+  background: #10b981;
+}
+
+.btn-error {
+  background: #ef4444;
+}
+
+.btn-warning {
+  background: #f59e0b;
+}
 
 .toast-list {
   position: absolute;
@@ -81,6 +89,36 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.toast.closing {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
 .toast button {
@@ -90,7 +128,18 @@ button:hover {
   font-size: 1.2rem;
 }
 
-.toast-success { background: #10b981; }
-.toast-error { background: #ef4444; }
-.toast-warning { background: #f59e0b; }
-.toast-info { background: #3b82f6; }
+.toast-success {
+  background: #10b981;
+}
+
+.toast-error {
+  background: #ef4444;
+}
+
+.toast-warning {
+  background: #f59e0b;
+}
+
+.toast-info {
+  background: #3b82f6;
+}
